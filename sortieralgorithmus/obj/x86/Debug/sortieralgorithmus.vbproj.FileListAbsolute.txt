@@ -1,0 +1,9 @@
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\bin\Debug\sortieralgorithmus.exe
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\bin\Debug\sortieralgorithmus.pdb
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\bin\Debug\sortieralgorithmus.xml
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.Resources.resources
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.vbproj.GenerateResource.Cache
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.exe
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.xml
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.pdb
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.frmSort.resources
