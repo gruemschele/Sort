@@ -154,7 +154,7 @@ Public Class frmSort
         If TypeOf Me.ActiveControl Is TextBox Then
             mnuEdit_itmCut.Enabled = CType(Me.ActiveControl, TextBox).SelectionLength > 0
             mnuEdit_itmCopy.Enabled = CType(Me.ActiveControl, TextBox).SelectionLength > 0
-            mnuEdit_itmPaste.Enabled = CBool(Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
+            mnuEdit_itmPaste.Enabled = Clipboard.ContainsText
             mnuEdit_itmSort.Enabled = txtInput.Text.Length > 0
         End If
     End Sub

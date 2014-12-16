@@ -121,6 +121,27 @@
   <ItemGroup>
     <None Include="Resources\loader.GIF" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened_folder-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphabetical_sorting-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste-22.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

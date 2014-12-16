@@ -22,6 +22,7 @@ Partial Class frmSort
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSort))
         Me.txtInput = New System.Windows.Forms.TextBox()
         Me.txtOutput = New System.Windows.Forms.TextBox()
         Me.btnSort = New System.Windows.Forms.Button()
@@ -58,11 +59,14 @@ Partial Class frmSort
         Me.fileDlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.fileDlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.clrDlgChoose = New System.Windows.Forms.ColorDialog()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpInput.SuspendLayout()
         Me.grpOutput.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.mnuStrip.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtInput
@@ -73,7 +77,7 @@ Partial Class frmSort
         Me.txtInput.Location = New System.Drawing.Point(7, 19)
         Me.txtInput.Multiline = True
         Me.txtInput.Name = "txtInput"
-        Me.txtInput.Size = New System.Drawing.Size(443, 205)
+        Me.txtInput.Size = New System.Drawing.Size(443, 180)
         Me.txtInput.TabIndex = 1
         '
         'txtOutput
@@ -85,13 +89,13 @@ Partial Class frmSort
         Me.txtOutput.Location = New System.Drawing.Point(7, 19)
         Me.txtOutput.Multiline = True
         Me.txtOutput.Name = "txtOutput"
-        Me.txtOutput.Size = New System.Drawing.Size(443, 186)
+        Me.txtOutput.Size = New System.Drawing.Size(443, 161)
         Me.txtOutput.TabIndex = 6
         '
         'btnSort
         '
         Me.btnSort.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSort.Location = New System.Drawing.Point(6, 359)
+        Me.btnSort.Location = New System.Drawing.Point(6, 334)
         Me.btnSort.Name = "btnSort"
         Me.btnSort.Size = New System.Drawing.Size(97, 23)
         Me.btnSort.TabIndex = 5
@@ -102,7 +106,7 @@ Partial Class frmSort
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 397)
+        Me.Label1.Location = New System.Drawing.Point(3, 372)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(131, 13)
         Me.Label1.TabIndex = 7
@@ -111,7 +115,7 @@ Partial Class frmSort
         'txtTime
         '
         Me.txtTime.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTime.Location = New System.Drawing.Point(6, 418)
+        Me.txtTime.Location = New System.Drawing.Point(6, 393)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
         Me.txtTime.Size = New System.Drawing.Size(136, 20)
@@ -121,7 +125,7 @@ Partial Class frmSort
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.sortieralgorithmus.My.Resources.Resources.loader
-        Me.PictureBox1.Location = New System.Drawing.Point(117, 359)
+        Me.PictureBox1.Location = New System.Drawing.Point(117, 334)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(25, 23)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -167,9 +171,9 @@ Partial Class frmSort
         Me.grpInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpInput.Controls.Add(Me.txtInput)
-        Me.grpInput.Location = New System.Drawing.Point(13, 27)
+        Me.grpInput.Location = New System.Drawing.Point(13, 52)
         Me.grpInput.Name = "grpInput"
-        Me.grpInput.Size = New System.Drawing.Size(455, 230)
+        Me.grpInput.Size = New System.Drawing.Size(455, 205)
         Me.grpInput.TabIndex = 0
         Me.grpInput.TabStop = False
         Me.grpInput.Text = "Unsortiert"
@@ -180,9 +184,9 @@ Partial Class frmSort
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpOutput.Controls.Add(Me.txtOutput)
-        Me.grpOutput.Location = New System.Drawing.Point(13, 260)
+        Me.grpOutput.Location = New System.Drawing.Point(13, 285)
         Me.grpOutput.Name = "grpOutput"
-        Me.grpOutput.Size = New System.Drawing.Size(455, 211)
+        Me.grpOutput.Size = New System.Drawing.Size(455, 186)
         Me.grpOutput.TabIndex = 5
         Me.grpOutput.TabStop = False
         Me.grpOutput.Text = "Sortiert"
@@ -198,9 +202,9 @@ Partial Class frmSort
         Me.Panel1.Controls.Add(Me.chkSpecialCharacters)
         Me.Panel1.Controls.Add(Me.btnSort)
         Me.Panel1.Controls.Add(Me.cboSort)
-        Me.Panel1.Location = New System.Drawing.Point(474, 27)
+        Me.Panel1.Location = New System.Drawing.Point(474, 52)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(145, 444)
+        Me.Panel1.Size = New System.Drawing.Size(145, 419)
         Me.Panel1.TabIndex = 2
         '
         'mnuStrip
@@ -364,11 +368,30 @@ Partial Class frmSort
         '
         Me.clrDlgChoose.Color = System.Drawing.SystemColors.MenuHighlight
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(631, 25)
+        Me.ToolStrip1.TabIndex = 8
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'frmSort
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(631, 482)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.grpInput)
         Me.Controls.Add(Me.grpOutput)
@@ -385,6 +408,8 @@ Partial Class frmSort
         Me.Panel1.PerformLayout()
         Me.mnuStrip.ResumeLayout(False)
         Me.mnuStrip.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -425,5 +450,7 @@ Partial Class frmSort
     Friend WithEvents fileDlgOpen As System.Windows.Forms.OpenFileDialog
     Friend WithEvents fileDlgSave As System.Windows.Forms.SaveFileDialog
     Friend WithEvents clrDlgChoose As System.Windows.Forms.ColorDialog
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 
 End Class
