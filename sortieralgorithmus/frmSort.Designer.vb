@@ -53,6 +53,8 @@ Partial Class frmSort
         Me.mnuOptions_itmColor = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit_itmColor_itmForm = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit_itmColor_itmTextbox = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelp_itmInformations = New System.Windows.Forms.ToolStripMenuItem()
         Me.fileDlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.fileDlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.clrDlgChoose = New System.Windows.Forms.ColorDialog()
@@ -214,7 +216,7 @@ Partial Class frmSort
         '
         'mnuStrip
         '
-        Me.mnuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuOptions})
+        Me.mnuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuOptions, Me.mnuHelp})
         Me.mnuStrip.Location = New System.Drawing.Point(0, 0)
         Me.mnuStrip.Name = "mnuStrip"
         Me.mnuStrip.Size = New System.Drawing.Size(631, 24)
@@ -226,7 +228,7 @@ Partial Class frmSort
         Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile_itmNew, Me.mnuFile_itmOpen, Me.mnuFile_itmSave, Me.mnuFile_itmQuit})
         Me.mnuFile.Name = "mnuFile"
         Me.mnuFile.Size = New System.Drawing.Size(46, 20)
-        Me.mnuFile.Text = "Datei"
+        Me.mnuFile.Text = "&Datei"
         '
         'mnuFile_itmNew
         '
@@ -261,7 +263,7 @@ Partial Class frmSort
         Me.mnuEdit.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuEdit_itmCut, Me.mnuEdit_itmCopy, Me.mnuEdit_itmPaste, Me.ToolStripMenuItem1, Me.mnuEdit_itmSort})
         Me.mnuEdit.Name = "mnuEdit"
         Me.mnuEdit.Size = New System.Drawing.Size(75, 20)
-        Me.mnuEdit.Text = "Bearbeiten"
+        Me.mnuEdit.Text = "&Bearbeiten"
         '
         'mnuEdit_itmCut
         '
@@ -294,14 +296,14 @@ Partial Class frmSort
         Me.mnuEdit_itmSort.Name = "mnuEdit_itmSort"
         Me.mnuEdit_itmSort.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
         Me.mnuEdit_itmSort.Size = New System.Drawing.Size(191, 22)
-        Me.mnuEdit_itmSort.Text = "Sortieren"
+        Me.mnuEdit_itmSort.Text = "&Sortieren"
         '
         'mnuOptions
         '
         Me.mnuOptions.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuOptions_itmSpecialCharacters, Me.ToolStripMenuItem2, Me.mnuOptions_itmColor})
         Me.mnuOptions.Name = "mnuOptions"
         Me.mnuOptions.Size = New System.Drawing.Size(69, 20)
-        Me.mnuOptions.Text = "Optionen"
+        Me.mnuOptions.Text = "&Optionen"
         '
         'mnuOptions_itmSpecialCharacters
         '
@@ -338,6 +340,20 @@ Partial Class frmSort
         Me.mnuEdit_itmColor_itmTextbox.Size = New System.Drawing.Size(164, 22)
         Me.mnuEdit_itmColor_itmTextbox.Tag = "txtBox"
         Me.mnuEdit_itmColor_itmTextbox.Text = "&Textbox"
+        '
+        'mnuHelp
+        '
+        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuHelp_itmInformations})
+        Me.mnuHelp.Name = "mnuHelp"
+        Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
+        Me.mnuHelp.Text = "&Hilfe"
+        '
+        'mnuHelp_itmInformations
+        '
+        Me.mnuHelp_itmInformations.Name = "mnuHelp_itmInformations"
+        Me.mnuHelp_itmInformations.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
+        Me.mnuHelp_itmInformations.Size = New System.Drawing.Size(189, 22)
+        Me.mnuHelp_itmInformations.Text = "&Informationen"
         '
         'fileDlgOpen
         '
@@ -512,5 +528,7 @@ Partial Class frmSort
     Friend WithEvents toolStrp_btnPaste As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents toolStrp_btnSort As System.Windows.Forms.ToolStripButton
+    Friend WithEvents mnuHelp As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnuHelp_itmInformations As System.Windows.Forms.ToolStripMenuItem
 
 End Class

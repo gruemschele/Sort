@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Die Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("sortieralgorithmus")> 
+<Assembly: AssemblyTitle("Sortieralgorithmus")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("sortieralgorithmus")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyCompany("manuelmeister.ch")> 
+<Assembly: AssemblyProduct("SortAlgo 2000")> 
+<Assembly: AssemblyCopyright("2015 © manuelmeister.ch")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' übernehmen, indem Sie "*" eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.3.3.7")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> 

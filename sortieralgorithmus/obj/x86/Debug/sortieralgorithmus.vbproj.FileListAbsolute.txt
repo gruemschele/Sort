@@ -7,3 +7,4 @@ C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralg
 C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.xml
 C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.pdb
 C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.frmSort.resources
+C:\daten\Modul318\sortieralgorithmus\sortieralgorithmus\obj\x86\Debug\sortieralgorithmus.frmAboutBox.resources

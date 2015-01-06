@@ -6,7 +6,45 @@ sortieralgorithmus
 </name>
 </assembly>
 <members>
-<member name="P:sortieralgorithmus.My.Resources.Resources.ResourceManager">
+<member name="M:sortieralgorithmus.modAlgo.isBigger(System.Object@,System.Object@,System.Object@)">
+	<summary>
+ Compares to items
+ </summary>
+	<param name="x">First Item</param>
+	<param name="y">Second Item</param>
+	<param name="boolSpecialCharacters">Is true if special characters should be checked</param>
+	<returns>Boolean if x is bigger than y</returns>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.modAlgo.swapItems(System.Object@,System.Object@,System.Object@)">
+	<summary>
+ Swap items in array
+ </summary>
+	<param name="array">array in which the items sould be swapped</param>
+	<param name="x">frist item</param>
+	<param name="y">second item</param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.modAlgo.array_bubblesort(System.Object@,System.Object@)">
+	<summary>
+ Bubblesort with array
+ </summary>
+	<param name="inputArray">Array to be sorted</param>
+	<param name="boolSpecialCharacters">Is true if special characters should be checked</param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.modAlgo.array_quicksort(System.Array@,System.Boolean@)">
+	<summary>
+	</summary>
+	<param name="inputArray">Array to be sorted</param>
+	<param name="boolSpecialCharacters">Is true if special characters should be checked</param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.modAlgo.quicksort(System.Object@,System.Object@,System.Object,System.Object)">
+	<summary>
+	</summary>
+	<param name="inputArray">Array to be sorted</param>
+	<param name="boolSpecialCharacters">Is true if special characters should be checked</param>
+	<param name="startPos">startposition in array</param>
+	<param name="endPos">endposition in array</param>
+	<remarks></remarks>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.ResourceManager">
 	<summary>
   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
 </summary>
@@ -51,6 +89,29 @@ sortieralgorithmus
 	<summary>
   Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
 </summary>
+</member><member name="M:sortieralgorithmus.frmSort.btnSort_Click(System.Object,System.EventArgs)">
+	<summary>
+ Sorts the input and writes it to the output
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.callMethod(System.Object@)">
+	<summary>
+ Calls the specific sort algorithmus
+ </summary>
+	<param name="inputArray"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.startProcessing">
+	<summary>
+ Sets the application in rendering mode
+ </summary>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.stopProcessing">
+	<summary>
+ Leaves the rendering mode
+ </summary>
+	<remarks></remarks>
 </member><member name="M:sortieralgorithmus.frmSort.mnuFile_Click(System.Object,System.EventArgs)">
 	<summary>
  Checks if the "File" menu items, sould be enabled

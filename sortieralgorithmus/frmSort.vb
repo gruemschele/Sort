@@ -7,6 +7,12 @@ Public Class frmSort
     Dim firstCursor = Me.Cursor
     Dim userInput As Array
 
+    ''' <summary>
+    ''' Sorts the input and writes it to the output
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnSort_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSort.Click, mnuEdit_itmSort.Click, toolStrp_btnSort.Click
         startProcessing()
 
@@ -41,6 +47,11 @@ Public Class frmSort
 
     End Sub
 
+    ''' <summary>
+    ''' Calls the specific sort algorithmus
+    ''' </summary>
+    ''' <param name="inputArray"></param>
+    ''' <remarks></remarks>
     Private Sub callMethod(ByRef inputArray)
         Select Case cboSort.SelectedItem
             Case "quicksort"
@@ -50,6 +61,10 @@ Public Class frmSort
         End Select
     End Sub
 
+    ''' <summary>
+    ''' Sets the application in rendering mode
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub startProcessing()
         btnSort.Enabled = False
         txtInput.Enabled = False
@@ -58,6 +73,10 @@ Public Class frmSort
         Me.Cursor = Windows.Forms.Cursors.WaitCursor
     End Sub
 
+    ''' <summary>
+    ''' Leaves the rendering mode
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub stopProcessing()
         PictureBox1.Visible = False
         Me.Cursor = firstCursor
@@ -299,4 +318,7 @@ Public Class frmSort
         End If
     End Sub
 
+    Private Sub mnuHelp_itmInformations_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuHelp_itmInformations.Click
+        frmAboutBox.Show()
+    End Sub
 End Class
