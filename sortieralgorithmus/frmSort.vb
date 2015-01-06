@@ -7,7 +7,7 @@ Public Class frmSort
     Dim firstCursor = Me.Cursor
     Dim userInput As Array
 
-    Private Sub btnSort_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSort.Click, mnuEdit_itmSort.Click
+    Private Sub btnSort_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSort.Click, mnuEdit_itmSort.Click, toolStrp_btnSort.Click
         startProcessing()
 
         If chkWords.Checked Then
@@ -50,24 +50,6 @@ Public Class frmSort
         End Select
     End Sub
 
-
-    Private Sub startStopwatch()
-        watch.Start()
-    End Sub
-
-    Private Sub stopStopwatch()
-        watch.Stop()
-        If watch.Elapsed.Hours > 0 Then
-            txtTime.Text = watch.Elapsed.Hours & " h " & watch.Elapsed.Minutes Mod 60 & " min"
-        ElseIf watch.Elapsed.Minutes > 0 Then
-            txtTime.Text = watch.Elapsed.Minutes & " min " & watch.Elapsed.Seconds Mod 60 & " s"
-        ElseIf watch.Elapsed.Seconds > 0 Then
-            txtTime.Text = watch.Elapsed.Seconds & "." & watch.Elapsed.Milliseconds Mod 1000 & " s"
-        Else
-            txtTime.Text = watch.Elapsed.Milliseconds & " ms"
-        End If
-    End Sub
-
     Private Sub startProcessing()
         btnSort.Enabled = False
         txtInput.Enabled = False
@@ -91,6 +73,12 @@ Public Class frmSort
     ''======================
     ''      MENU FILE
     ''======================
+    ''' <summary>
+    ''' Checks if the "File" menu items, sould be enabled
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub mnuFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile.Click
         If txtOutput.Text = Nothing Then
             mnuFile_itmSave.Enabled = False
@@ -99,13 +87,25 @@ Public Class frmSort
         End If
     End Sub
 
-    Private Sub mnuFile_itmNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmNew.Click
+    ''' <summary>
+    ''' Reset all fields
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuFile_itmNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmNew.Click, toolStrp_btnNewFile.Click
         txtInput.Text = ""
         txtOutput.Text = ""
         txtTime.Text = ""
     End Sub
 
-    Private Sub mnuFile_itmOpen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmOpen.Click
+    ''' <summary>
+    ''' Load a textfile in txtInput
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuFile_itmOpen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmOpen.Click, toolStrp_btnOpenFile.Click
         Dim inputFile = fileDlgOpen.ShowDialog()
         If inputFile = Windows.Forms.DialogResult.OK Then
             Me.Show()
@@ -126,8 +126,13 @@ Public Class frmSort
         End If
     End Sub
 
-    Private Sub mnuFile_itmSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmSave.Click
-
+    ''' <summary>
+    ''' Saves the txtOutput to a Textfile
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuFile_itmSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmSave.Click, toolStrp_btnSaveFile.Click
         If fileDlgSave.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Dim outputFile = fileDlgSave.ShowDialog()
             If outputFile = Windows.Forms.DialogResult.OK Then
@@ -142,6 +147,12 @@ Public Class frmSort
         End If
     End Sub
 
+    ''' <summary>
+    ''' Quits the application
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub mnuFile_itmQuit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFile_itmQuit.Click
         Me.Close()
         End
@@ -150,6 +161,12 @@ Public Class frmSort
     ''======================
     ''      MENU EDIT
     ''======================
+    ''' <summary>
+    ''' Checks if the "Edit" menu items, sould be enabled
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub mnuEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit.Click
         If TypeOf Me.ActiveControl Is TextBox Then
             mnuEdit_itmCut.Enabled = CType(Me.ActiveControl, TextBox).SelectionLength > 0
@@ -159,19 +176,37 @@ Public Class frmSort
         End If
     End Sub
 
-    Private Sub mnuEdit_itmCut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmCut.Click
+    ''' <summary>
+    ''' Cut action handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuEdit_itmCut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmCut.Click, toolStrp_btnCut.Click
         If TypeOf Me.ActiveControl Is TextBox Then
             CType(Me.ActiveControl, TextBox).Cut()
         End If
     End Sub
 
-    Private Sub mnuEdit_itmCopy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmCopy.Click
+    ''' <summary>
+    ''' Copy action Handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuEdit_itmCopy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmCopy.Click, toolStrp_btnCopy.Click
         If TypeOf Me.ActiveControl Is TextBox Then
             CType(Me.ActiveControl, TextBox).Copy()
         End If
     End Sub
 
-    Private Sub mnuEdit_itmPaste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmPaste.Click
+    ''' <summary>
+    ''' Paste action handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub mnuEdit_itmPaste_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmPaste.Click, toolStrp_btnPaste.Click
         If TypeOf Me.ActiveControl Is TextBox Then
             CType(Me.ActiveControl, TextBox).Paste()
         End If
@@ -180,14 +215,32 @@ Public Class frmSort
     ''======================
     ''     MENU OPTIONS
     ''======================
+    ''' <summary>
+    ''' Special Characters Menu Handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub mnuOptions_itmSpecialCharacters_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuOptions_itmSpecialCharacters.Click
         chkSpecialCharacters.Checked = mnuOptions_itmSpecialCharacters.Checked
     End Sub
 
+    ''' <summary>
+    ''' Special Characters Checkbox Handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub chkSpecialCharacters_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkSpecialCharacters.CheckedChanged
         mnuOptions_itmSpecialCharacters.Checked = chkSpecialCharacters.Checked
     End Sub
 
+    ''' <summary>
+    ''' Menu Color Handler
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub mnuEdit_itmColor_itmForm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEdit_itmColor_itmForm.Click, mnuEdit_itmColor_itmTextbox.Click
         Dim currentColor As Color
         Select Case sender.Tag
@@ -217,10 +270,33 @@ Public Class frmSort
     End Sub
 
 
-    ''======================
-    ''      MENU HELP
-    ''======================
-    Private Sub mnuHelp_itmInfos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuHelp_itmInfos.Click
+    ''' <summary>
+    ''' Checks which Toolbar Strip Icons in the the current state, should be enabled.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub txtInput_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtInput.TextChanged, txtOutput.TextChanged, txtInput.MouseClick, txtOutput.MouseClick, txtInput.MouseEnter, txtOutput.MouseEnter
 
+        If txtInput.TextLength > 1 Then
+            toolStrp_btnSort.Enabled = True
+        Else
+            toolStrp_btnSort.Enabled = False
+        End If
+
+        If txtOutput.TextLength > 0 Then
+            toolStrp_btnSaveFile.Enabled = True
+        Else
+            toolStrp_btnSaveFile.Enabled = False
+        End If
+
+        If txtInput.SelectionLength > 0 Or txtOutput.SelectionLength > 0 Then
+            toolStrp_btnCopy.Enabled = True
+            toolStrp_btnCut.Enabled = True
+        Else
+            toolStrp_btnCopy.Enabled = False
+            toolStrp_btnCut.Enabled = False
+        End If
     End Sub
+
 End Class

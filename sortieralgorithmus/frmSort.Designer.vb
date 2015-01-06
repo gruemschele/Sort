@@ -53,14 +53,19 @@ Partial Class frmSort
         Me.mnuOptions_itmColor = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit_itmColor_itmForm = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit_itmColor_itmTextbox = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp_itmInfos = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp_itmHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.fileDlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.fileDlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.clrDlgChoose = New System.Windows.Forms.ColorDialog()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnNewFile = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnOpenFile = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnSaveFile = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.toolStrp_btnCopy = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnCut = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnPaste = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.toolStrp_btnSort = New System.Windows.Forms.ToolStripButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpInput.SuspendLayout()
         Me.grpOutput.SuspendLayout()
@@ -124,7 +129,7 @@ Partial Class frmSort
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.sortieralgorithmus.My.Resources.Resources.loader
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(117, 334)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(25, 23)
@@ -209,7 +214,7 @@ Partial Class frmSort
         '
         'mnuStrip
         '
-        Me.mnuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuOptions, Me.mnuHelp})
+        Me.mnuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuOptions})
         Me.mnuStrip.Location = New System.Drawing.Point(0, 0)
         Me.mnuStrip.Name = "mnuStrip"
         Me.mnuStrip.Size = New System.Drawing.Size(631, 24)
@@ -334,26 +339,6 @@ Partial Class frmSort
         Me.mnuEdit_itmColor_itmTextbox.Tag = "txtBox"
         Me.mnuEdit_itmColor_itmTextbox.Text = "&Textbox"
         '
-        'mnuHelp
-        '
-        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuHelp_itmInfos, Me.mnuHelp_itmHelp})
-        Me.mnuHelp.Name = "mnuHelp"
-        Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
-        Me.mnuHelp.Text = "Hilfe"
-        '
-        'mnuHelp_itmInfos
-        '
-        Me.mnuHelp_itmInfos.Name = "mnuHelp_itmInfos"
-        Me.mnuHelp_itmInfos.Size = New System.Drawing.Size(152, 22)
-        Me.mnuHelp_itmInfos.Text = "Information"
-        '
-        'mnuHelp_itmHelp
-        '
-        Me.mnuHelp_itmHelp.Enabled = False
-        Me.mnuHelp_itmHelp.Name = "mnuHelp_itmHelp"
-        Me.mnuHelp_itmHelp.Size = New System.Drawing.Size(152, 22)
-        Me.mnuHelp_itmHelp.Text = "Hilfe"
-        '
         'fileDlgOpen
         '
         Me.fileDlgOpen.Filter = "Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*"
@@ -370,21 +355,91 @@ Partial Class frmSort
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStrp_btnNewFile, Me.toolStrp_btnOpenFile, Me.toolStrp_btnSaveFile, Me.ToolStripSeparator1, Me.toolStrp_btnCopy, Me.toolStrp_btnCut, Me.toolStrp_btnPaste, Me.ToolStripSeparator2, Me.toolStrp_btnSort})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(631, 25)
         Me.ToolStrip1.TabIndex = 8
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'toolStrp_btnNewFile
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.toolStrp_btnNewFile.AutoSize = False
+        Me.toolStrp_btnNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnNewFile.Image = CType(resources.GetObject("toolStrp_btnNewFile.Image"), System.Drawing.Image)
+        Me.toolStrp_btnNewFile.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnNewFile.Name = "toolStrp_btnNewFile"
+        Me.toolStrp_btnNewFile.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnNewFile.Text = "Neue leere Datei"
+        '
+        'toolStrp_btnOpenFile
+        '
+        Me.toolStrp_btnOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnOpenFile.Image = CType(resources.GetObject("toolStrp_btnOpenFile.Image"), System.Drawing.Image)
+        Me.toolStrp_btnOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnOpenFile.Name = "toolStrp_btnOpenFile"
+        Me.toolStrp_btnOpenFile.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnOpenFile.Text = "Datei öffnen"
+        '
+        'toolStrp_btnSaveFile
+        '
+        Me.toolStrp_btnSaveFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnSaveFile.Enabled = False
+        Me.toolStrp_btnSaveFile.Image = CType(resources.GetObject("toolStrp_btnSaveFile.Image"), System.Drawing.Image)
+        Me.toolStrp_btnSaveFile.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnSaveFile.Name = "toolStrp_btnSaveFile"
+        Me.toolStrp_btnSaveFile.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnSaveFile.Text = "Datei speichern"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'toolStrp_btnCopy
+        '
+        Me.toolStrp_btnCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnCopy.Enabled = False
+        Me.toolStrp_btnCopy.Image = CType(resources.GetObject("toolStrp_btnCopy.Image"), System.Drawing.Image)
+        Me.toolStrp_btnCopy.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnCopy.Name = "toolStrp_btnCopy"
+        Me.toolStrp_btnCopy.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnCopy.Text = "Kopieren"
+        '
+        'toolStrp_btnCut
+        '
+        Me.toolStrp_btnCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnCut.Enabled = False
+        Me.toolStrp_btnCut.Image = CType(resources.GetObject("toolStrp_btnCut.Image"), System.Drawing.Image)
+        Me.toolStrp_btnCut.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnCut.Name = "toolStrp_btnCut"
+        Me.toolStrp_btnCut.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnCut.Text = "Ausschneiden"
+        '
+        'toolStrp_btnPaste
+        '
+        Me.toolStrp_btnPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnPaste.Image = CType(resources.GetObject("toolStrp_btnPaste.Image"), System.Drawing.Image)
+        Me.toolStrp_btnPaste.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnPaste.Name = "toolStrp_btnPaste"
+        Me.toolStrp_btnPaste.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnPaste.Text = "Einfügen"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'toolStrp_btnSort
+        '
+        Me.toolStrp_btnSort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnSort.Enabled = False
+        Me.toolStrp_btnSort.Image = CType(resources.GetObject("toolStrp_btnSort.Image"), System.Drawing.Image)
+        Me.toolStrp_btnSort.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnSort.Name = "toolStrp_btnSort"
+        Me.toolStrp_btnSort.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnSort.Text = "Sortieren"
         '
         'frmSort
         '
@@ -434,9 +489,6 @@ Partial Class frmSort
     Friend WithEvents mnuFile_itmQuit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuEdit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuOptions As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents mnuHelp As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents mnuHelp_itmInfos As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents mnuHelp_itmHelp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuEdit_itmCut As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuEdit_itmCopy As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuEdit_itmPaste As System.Windows.Forms.ToolStripMenuItem
@@ -451,6 +503,14 @@ Partial Class frmSort
     Friend WithEvents fileDlgSave As System.Windows.Forms.SaveFileDialog
     Friend WithEvents clrDlgChoose As System.Windows.Forms.ColorDialog
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents toolStrp_btnCopy As System.Windows.Forms.ToolStripButton
+    Friend WithEvents toolStrp_btnNewFile As System.Windows.Forms.ToolStripButton
+    Friend WithEvents toolStrp_btnOpenFile As System.Windows.Forms.ToolStripButton
+    Friend WithEvents toolStrp_btnSaveFile As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents toolStrp_btnCut As System.Windows.Forms.ToolStripButton
+    Friend WithEvents toolStrp_btnPaste As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents toolStrp_btnSort As System.Windows.Forms.ToolStripButton
 
 End Class

@@ -15,7 +15,35 @@ sortieralgorithmus
   Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
 </summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.alphabetical_sorting_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.copy_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.cut_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.file_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
 </member><member name="P:sortieralgorithmus.My.Resources.Resources.loader">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.opened_folder_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.paste_22">
+	<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member><member name="P:sortieralgorithmus.My.Resources.Resources.save_22">
 	<summary>
   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
 </summary>
@@ -23,6 +51,97 @@ sortieralgorithmus
 	<summary>
   Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
 </summary>
+</member><member name="M:sortieralgorithmus.frmSort.mnuFile_Click(System.Object,System.EventArgs)">
+	<summary>
+ Checks if the "File" menu items, sould be enabled
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuFile_itmNew_Click(System.Object,System.EventArgs)">
+	<summary>
+ Reset all fields
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuFile_itmOpen_Click(System.Object,System.EventArgs)">
+	<summary>
+ Load a textfile in txtInput
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuFile_itmSave_Click(System.Object,System.EventArgs)">
+	<summary>
+ Saves the txtOutput to a Textfile
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuFile_itmQuit_Click(System.Object,System.EventArgs)">
+	<summary>
+ Quits the application
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuEdit_Click(System.Object,System.EventArgs)">
+	<summary>
+ Checks if the "Edit" menu items, sould be enabled
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuEdit_itmCut_Click(System.Object,System.EventArgs)">
+	<summary>
+ Cut action handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuEdit_itmCopy_Click(System.Object,System.EventArgs)">
+	<summary>
+ Copy action Handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuEdit_itmPaste_Click(System.Object,System.EventArgs)">
+	<summary>
+ Paste action handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuOptions_itmSpecialCharacters_Click(System.Object,System.EventArgs)">
+	<summary>
+ Special Characters Menu Handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.chkSpecialCharacters_CheckedChanged(System.Object,System.EventArgs)">
+	<summary>
+ Special Characters Checkbox Handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.mnuEdit_itmColor_itmForm_Click(System.Object,System.EventArgs)">
+	<summary>
+ Menu Color Handler
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:sortieralgorithmus.frmSort.txtInput_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ Checks which Toolbar Strip Icons in the the current state, should be enabled.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
 </member>
 </members>
 </doc>
