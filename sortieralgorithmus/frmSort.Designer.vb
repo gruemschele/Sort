@@ -68,6 +68,7 @@ Partial Class frmSort
         Me.toolStrp_btnPaste = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.toolStrp_btnSort = New System.Windows.Forms.ToolStripButton()
+        Me.toolStrp_btnInfo = New System.Windows.Forms.ToolStripButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpInput.SuspendLayout()
         Me.grpOutput.SuspendLayout()
@@ -372,7 +373,7 @@ Partial Class frmSort
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStrp_btnNewFile, Me.toolStrp_btnOpenFile, Me.toolStrp_btnSaveFile, Me.ToolStripSeparator1, Me.toolStrp_btnCopy, Me.toolStrp_btnCut, Me.toolStrp_btnPaste, Me.ToolStripSeparator2, Me.toolStrp_btnSort})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStrp_btnNewFile, Me.toolStrp_btnOpenFile, Me.toolStrp_btnSaveFile, Me.ToolStripSeparator1, Me.toolStrp_btnCopy, Me.toolStrp_btnCut, Me.toolStrp_btnPaste, Me.ToolStripSeparator2, Me.toolStrp_btnSort, Me.toolStrp_btnInfo})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(631, 25)
@@ -457,6 +458,15 @@ Partial Class frmSort
         Me.toolStrp_btnSort.Size = New System.Drawing.Size(23, 22)
         Me.toolStrp_btnSort.Text = "Sortieren"
         '
+        'toolStrp_btnInfo
+        '
+        Me.toolStrp_btnInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStrp_btnInfo.Image = Global.sortieralgorithmus.My.Resources.Resources.info_22
+        Me.toolStrp_btnInfo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStrp_btnInfo.Name = "toolStrp_btnInfo"
+        Me.toolStrp_btnInfo.Size = New System.Drawing.Size(23, 22)
+        Me.toolStrp_btnInfo.Text = "ToolStripButton1"
+        '
         'frmSort
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -530,5 +540,6 @@ Partial Class frmSort
     Friend WithEvents toolStrp_btnSort As System.Windows.Forms.ToolStripButton
     Friend WithEvents mnuHelp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuHelp_itmInformations As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents toolStrp_btnInfo As System.Windows.Forms.ToolStripButton
 
 End Class

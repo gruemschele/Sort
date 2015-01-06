@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Die Werte der Assemblyattribute überprüfen
 
 <Assembly: AssemblyTitle("Sortieralgorithmus")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("manuelmeister.ch")> 
+<Assembly: AssemblyDescription("Dieses Programm wurde für das Modul 318 der GIBB geschrieben.")> 
+<Assembly: AssemblyCompany("meister.io")> 
 <Assembly: AssemblyProduct("SortAlgo 2000")> 
-<Assembly: AssemblyCopyright("2015 © manuelmeister.ch")> 
+<Assembly: AssemblyCopyright("© 2015 Manuel Meister")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

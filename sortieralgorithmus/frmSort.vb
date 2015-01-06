@@ -318,7 +318,8 @@ Public Class frmSort
         End If
     End Sub
 
-    Private Sub mnuHelp_itmInformations_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuHelp_itmInformations.Click
+    Private Sub mnuHelp_itmInformations_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuHelp_itmInformations.Click, toolStrp_btnInfo.Click
         frmAboutBox.Show()
     End Sub
+
 End Class
